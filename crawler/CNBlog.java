@@ -51,8 +51,8 @@ public class CNBlog {
                 parseContent(blogContent,link);
             }
         }
-        // 关闭缓存
-        CacheUtil.shutdown();
+        // 关闭缓存 - 缓存不能关闭 否则下次定期执行时会抛出缓存已关闭异常
+        // CacheUtil.shutdown();
     }
 
     /**
